@@ -5,13 +5,7 @@ Feature: Create online shop
     I want to login via email credentials
     so that I can create an online shop
 
-    @login
-    Scenario: user logs in with valid credentials
-        Given user is at the sentro login page
-        When user fill in the email and password fields
-        Then the browser should redirect to sentro dashboard
-
-    @sentroDashboardPage
+    @sentrologin
     Scenario: User will create an online shop with five steps
         Given a user is at the dashboard page
         When the user clicks the Create my online shop button

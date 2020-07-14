@@ -4,34 +4,7 @@ const data = require('../common/dataCredentials.js');
 const imageData = require('../common/dataBranding/branding')
 
 
-// Scenario: user logs in with valid credentials
-Given('user is at the sentro login page', function () {
-    const builderCommands = client.page.builderCommands();
-    
-    return builderCommands
-    .navigate()
-    .maximizeWindow()   
-});
-
-When('user fill in the email and password fields', function () {
-    const builderCommands = client.page.builderCommands();
-    
-    return builderCommands
-    .click('@loginMP')
-    .pause(1000)
-    .validLogin(data.validLogin.email, data.validLogin.password)
-    .waitForElementVisible('@loginButton')
-    .click('@loginButton')
-});
-
-Then('the browser should redirect to sentro dashboard', function () {
-    const builderCommands = client.page.builderCommands();
-    
-    return builderCommands
-    .assert.title('Sentro | Welcome to Sentro')
-});
-
-// Scenario: User will create a store
+// Scenario: User will create an online shop with five steps
 Given('a user is at the dashboard page', function () {
     const builderCommands = client.page.builderCommands();
     
