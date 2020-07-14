@@ -1,2 +1,3 @@
-# sentroph
-Automated Tests fot Sentro 
+# URL: https: app.dev.sentro.ph
+
+Automated Tests for Sentro 
